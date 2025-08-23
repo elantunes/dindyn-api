@@ -5,12 +5,14 @@ namespace Dindyn.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class AuthController : ControllerBase
+public class AuthController(IClienteApp clienteApp) : ControllerBase
 {
+	private readonly IClienteApp _clienteApp = clienteApp;
+
 	[HttpPost("login")]
 	public IActionResult Login([FromBody] LoginRequest request)
 	{
-		var resposta = ClienteApp.Login();
+		var resposta = _clienteApp.Login();
 
 		return Ok(resposta);
 	}
