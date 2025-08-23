@@ -1,4 +1,4 @@
-using Dindyn.Api.Models;
+using Dindyn.App.Cliente;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dindyn.Api.Controllers;
@@ -10,12 +10,8 @@ public class AuthController : ControllerBase
 	[HttpPost("login")]
 	public IActionResult Login([FromBody] LoginRequest request)
 	{
-		var resposta = new Resposta<object>
-		{
-			IsValid = true,
-			Result = null,
-			Errors = []
-		};
+		var resposta = ClienteApp.Login();
+
 		return Ok(resposta);
 	}
 }
