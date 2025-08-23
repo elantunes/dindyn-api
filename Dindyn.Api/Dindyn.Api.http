@@ -7,8 +7,7 @@ Accept: application/json
 
 POST {{DindynApi_HostAddress}}/auth/login
 Content-Type: application/json
-
 {
-  "email": "usuario@teste.com",
-  "password": "senha123"
+	"email": "usuario@teste.com",
+	"password": "senha123"
 }
