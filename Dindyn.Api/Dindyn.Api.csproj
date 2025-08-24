@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../Dindyn.App/Dindyn.App.csproj" />
+    <ProjectReference Include="../Dindyn.Commons/Dindyn.Commons.csproj" />
     <ProjectReference Include="../Dindyn.Infra/Dindyn.Infra.csproj" />
   </ItemGroup>
 

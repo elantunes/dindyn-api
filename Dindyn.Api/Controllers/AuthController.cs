@@ -12,9 +12,10 @@ public class AuthController(IClienteApp clienteApp) : ControllerBase
 	[HttpPost("login")]
 	public IActionResult Login([FromBody] LoginRequest request)
 	{
-		var resposta = _clienteApp.Login();
+		throw new NotImplementedException();
+		//var resposta = _clienteApp.Login();
 
-		return Ok(resposta);
+		//return Ok(resposta);
 	}
 }
 

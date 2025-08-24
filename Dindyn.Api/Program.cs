@@ -1,3 +1,4 @@
+using Dindyn.Api;
 using Dindyn.Infra;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,11 @@ builder.Services.AddControllers(options =>
 	options.Conventions.Add(new Microsoft.AspNetCore.Mvc.ApplicationModels.RouteTokenTransformerConvention(
 		new Dindyn.Api.Routing.SlugifyParameterTransformer()));
 });
+builder.Services.AddControllers()
+	.AddMvcOptions(options =>
+	{
+		options.Filters.Add<ApiExceptionFilter>();
+	});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
