@@ -8,6 +8,7 @@ Accept: application/json
 POST {{DindynApi_HostAddress}}/auth/login
 Accept: application/json
 Content-Type: application/json
+X-Api-Key: q5f3w2a870ixx1lvmmwhc5ux1cjvylyc2a8cjgiduigfajbdiygf
 
 {
 	"email": "usuario@teste.com",

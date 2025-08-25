@@ -11,6 +11,7 @@ builder.Services.AddControllers()
 	.AddMvcOptions(options =>
 	{
 		options.Filters.Add<ApiExceptionFilter>();
+		options.Filters.Add(typeof(ChaveSegurancaAttribute));
 	});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
