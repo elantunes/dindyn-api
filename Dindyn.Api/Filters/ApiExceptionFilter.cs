@@ -3,7 +3,7 @@ using Dindyn.Commons.Exceptions.Sistema;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Dindyn.Api;
+namespace Dindyn.Api.Filters;
 
 public class ApiExceptionFilter : IExceptionFilter
 {

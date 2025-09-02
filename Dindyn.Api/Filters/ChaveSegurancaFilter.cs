@@ -3,10 +3,10 @@ using Dindyn.Commons.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Dindyn.Api;
+namespace Dindyn.Api.Filters;
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
-public class ChaveSegurancaAttribute : Attribute, IActionFilter
+public class ChaveSegurancaFilter: Attribute, IActionFilter
 {
 	public void OnActionExecuting(ActionExecutingContext context)
 	{

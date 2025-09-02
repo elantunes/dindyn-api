@@ -1,4 +1,4 @@
-using Dindyn.Api;
+using Dindyn.Api.Filters;
 using Dindyn.Infra;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,10 +11,13 @@ builder.Services.AddControllers()
 	.AddMvcOptions(options =>
 	{
 		options.Filters.Add<ApiExceptionFilter>();
-		options.Filters.Add(typeof(ChaveSegurancaAttribute));
+		options.Filters.Add(typeof(ChaveSegurancaFilter));
 	});
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+	c.SwaggerDoc("v1", new() { Title = "Dindyn API", Version = "v1" });
+});
 
 Ioc.AddIDependencyInjection(builder.Services);
 
