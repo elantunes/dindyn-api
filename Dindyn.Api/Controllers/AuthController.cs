@@ -1,4 +1,5 @@
 using Dindyn.App.Cliente;
+using Dindyn.App.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dindyn.Api.Controllers;
@@ -12,15 +13,9 @@ public class AuthController(IClienteApp clienteApp) : ControllerBase
 	[HttpPost("login")]
 	public IActionResult Login([FromBody] LoginRequest request)
 	{
-		throw new NotImplementedException();
-		//var resposta = _clienteApp.Login();
+		var resposta = _clienteApp.Login(request);
 
-		//return Ok(resposta);
+		return Ok(resposta);
 	}
 }
 
-public class LoginRequest
-{
-	public required string Email { get; set; }
-	public required string Password { get; set; }
-}
