@@ -11,6 +11,6 @@ Content-Type: application/json
 X-Api-Key: q5f3w2a870ixx1lvmmwhc5ux1cjvylyc2a8cjgiduigfajbdiygf
 
 {
-	"email": "usuario@teste.com",
-	"senha": "senha123"
+	"email": "admin@dindyn.com",
+	"senha": "123456"
 }

@@ -30,7 +30,7 @@ public class ChaveSegurancaFilter: Attribute, IActionFilter
 
 			if (chaveFornecida != chave)
 			{
-				var resposta = new Resposta(Erro.SsitemaChaveDeSegurancaInvalida);
+				var resposta = new Resposta(Erro.SistemaChaveDeSegurancaInvalida);
 				context.Result = new JsonResult(resposta) { StatusCode = 401 };
 			}
 		}
