@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen(c =>
 	c.SwaggerDoc("v1", new() { Title = "Dindyn API", Version = "v1" });
 });
 
-builder.Services.AddInfrastructure();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
