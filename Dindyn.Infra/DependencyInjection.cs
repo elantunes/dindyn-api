@@ -3,7 +3,9 @@ using Dindyn.App.Cliente.Repositories;
 using Dindyn.App.Cliente.Services;
 using Dindyn.App.Services;
 using Dindyn.Infra.Extensions;
-using Dindyn.Infra.Interfaces;
+using Dindyn.Infra.Factories;
+using Dindyn.Infra.Repositories;
+using Dindyn.Infra.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,9 +15,10 @@ public static class DependencyInjection
 {
 	public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
 	{
-		// Database Factory
+		// Database Services
 		services.AddScoped<IDbConnectionFactory>(provider => 
 			new DbConnectionFactory(configuration.GetConnectionString("Dindyn")!));
+		services.AddScoped<IDapperService, DapperService>();
 
 		// Application Services
 		services.AddScoped<IClienteApp, ClienteApp>();

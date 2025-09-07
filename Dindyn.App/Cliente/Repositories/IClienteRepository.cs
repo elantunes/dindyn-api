@@ -2,5 +2,5 @@ namespace Dindyn.App.Cliente.Repositories;
 
 public interface IClienteRepository
 {
-	public bool Logon();
+	public Task<bool> Logon();
 }

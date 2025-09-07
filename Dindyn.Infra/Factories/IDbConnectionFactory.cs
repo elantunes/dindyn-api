@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace Dindyn.Infra.Interfaces;
+namespace Dindyn.Infra.Factories;
 
 public interface IDbConnectionFactory
 {

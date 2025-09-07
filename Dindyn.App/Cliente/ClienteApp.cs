@@ -13,14 +13,14 @@ public class ClienteApp(
 	private readonly IValidationService _validationService = validationService;
 	private readonly IClienteService _clienteService = clienteService;
 
-	public Resposta Logon(LoginRequest request)
+	public async Task<Resposta> Logon(LoginRequest request)
 	{
 		var validationErrors = _validationService.Validate(request);
 
 		if (validationErrors.Count != 0)
 			return new Resposta(false, null, validationErrors);
 
-		var logonValido = _clienteService.Logon(request);
+		var logonValido = await _clienteService.Logon(request);
 
 		if (logonValido)
 			return new Resposta(true,  new { Token = "fake-token" });

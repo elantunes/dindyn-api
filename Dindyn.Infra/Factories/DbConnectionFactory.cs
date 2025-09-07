@@ -1,8 +1,7 @@
-using System.Data;
-using Dindyn.Infra.Interfaces;
 using MySqlConnector;
+using System.Data;
 
-namespace Dindyn.Infra;
+namespace Dindyn.Infra.Factories;
 
 public class DbConnectionFactory(string connectionString) : IDbConnectionFactory
 {

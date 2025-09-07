@@ -4,5 +4,5 @@ namespace Dindyn.App.Cliente.Services;
 
 public interface IClienteService
 {
-	public bool Logon(LoginRequest request);
+	public Task<bool> Logon(LoginRequest request);
 }

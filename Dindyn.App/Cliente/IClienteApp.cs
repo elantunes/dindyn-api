@@ -5,5 +5,5 @@ namespace Dindyn.App.Cliente;
 
 public interface IClienteApp
 {
-    Resposta Logon(LoginRequest request);
+    Task<Resposta> Logon(LoginRequest request);
 }

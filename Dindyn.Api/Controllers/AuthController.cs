@@ -11,9 +11,9 @@ public class AuthController(IClienteApp clienteApp) : ControllerBase
 	private readonly IClienteApp _clienteApp = clienteApp;
 
 	[HttpPost("logon")]
-	public IActionResult Logon([FromBody] LoginRequest request)
+	public async Task<IActionResult> Logon([FromBody] LoginRequest request)
 	{
-		var resposta = _clienteApp.Logon(request);
+		var resposta = await _clienteApp.Logon(request);
 
 		return Ok(resposta);
 	}

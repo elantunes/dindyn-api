@@ -6,9 +6,9 @@ namespace Dindyn.App.Cliente.Services;
 public class ClienteService(
 	IClienteRepository clienteRepository) : IClienteService
 {
-	public bool Logon(LoginRequest request)
+	public async Task<bool> Logon(LoginRequest request)
 	{
-		var logon = clienteRepository.Logon();
+		var logon = await clienteRepository.Logon();
 		return logon;
 	}
 }
