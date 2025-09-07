@@ -2,14 +2,14 @@ using Dindyn.App.Cliente;
 using Dindyn.App.Cliente.Repositories;
 using Dindyn.App.Cliente.Services;
 using Dindyn.App.Services;
+using Dindyn.Infra.Data.Repositories;
 using Dindyn.Infra.Extensions;
 using Dindyn.Infra.Factories;
-using Dindyn.Infra.Repositories;
 using Dindyn.Infra.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dindyn.Infra;
+namespace Dindyn.Infra.Ioc;
 
 public static class DependencyInjection
 {

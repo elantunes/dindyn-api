@@ -1,7 +1,7 @@
 using Dindyn.App.Cliente.Repositories;
 using Dindyn.Infra.Services;
 
-namespace Dindyn.Infra.Repositories;
+namespace Dindyn.Infra.Data.Repositories;
 
 public class ClienteRepository(IDapperService dapperService) : IClienteRepository
 {

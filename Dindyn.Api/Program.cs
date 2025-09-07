@@ -1,5 +1,5 @@
 using Dindyn.Api.Filters;
-using Dindyn.Infra;
+using Dindyn.Infra.Ioc;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers(options =>
