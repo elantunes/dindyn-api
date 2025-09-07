@@ -1,7 +1,6 @@
-using Dindyn.App.Cliente;
 using Dindyn.App.Cliente.Repositories;
-using Dindyn.App.Cliente.Services;
-using Dindyn.App.Services;
+using Dindyn.App.Shared.Services;
+using Dindyn.App.UseCases.Auth.GerarToken;
 using Dindyn.Infra.Data;
 using Dindyn.Infra.Data.Repositories;
 using Dindyn.Infra.Extensions;
@@ -22,9 +21,10 @@ public static class DependencyInjection
 		services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 		// Application Services
-		services.AddScoped<IClienteApp, ClienteApp>();
 		services.AddScoped<IValidationService, ValidationService>();
-		services.AddScoped<IClienteService, ClienteService>();
+
+		// Use Cases
+		services.AddScoped<IGerarTokenUseCase, GerarTokenUseCase>();
 
 		// Repositories
 		services.AddScoped<IClienteRepository, ClienteRepository>();

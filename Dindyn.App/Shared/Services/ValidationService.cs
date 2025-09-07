@@ -4,7 +4,7 @@ using FluentValidation.Results;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Dindyn.App.Services;
+namespace Dindyn.App.Shared.Services;
 
 public class ValidationService(IServiceProvider serviceProvider) : IValidationService
 {

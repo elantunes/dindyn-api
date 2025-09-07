@@ -2,5 +2,5 @@ namespace Dindyn.App.Cliente.Repositories;
 
 public interface IClienteRepository
 {
-	public Task<bool> Logon();
+	public Task<string> GerarToken();
 }

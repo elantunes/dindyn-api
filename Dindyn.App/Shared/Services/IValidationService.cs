@@ -1,6 +1,6 @@
 using Dindyn.Commons.Exceptions;
 
-namespace Dindyn.App.Services;
+namespace Dindyn.App.Shared.Services;
 
 public interface IValidationService
 {

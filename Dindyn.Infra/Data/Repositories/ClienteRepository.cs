@@ -7,10 +7,10 @@ public class ClienteRepository(IDapperService dapperService) : IClienteRepositor
 {
 	private readonly IDapperService _dapperService = dapperService;
 
-	public async Task<bool> Logon()
+	public async Task<string> GerarToken()
 	{
 		var sql = "SELECT 1";
 		var loginValido = await _dapperService.QueryFirstOrDefault<bool>(sql);
-		return loginValido;
+		return string.Empty;
 	}
 }
