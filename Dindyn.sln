@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindyn.Api", "Dindyn.Api\Di
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindyn.App", "Dindyn.App\Dindyn.App.csproj", "{85F7BCD5-DF3C-46DF-9274-D2FC3A9FADDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindyn.Infra", "Dindyn.Infra\Dindyn.Infra.csproj", "{423A5BBF-090C-4971-8B37-317E1153993E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindyn.Commons", "Dindyn.Commons\Dindyn.Commons.csproj", "{D9B3D1CE-C5D3-405C-80FC-DC9737CAAEBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindyn.Domain", "Dindyn.Domain\Dindyn.Domain.csproj", "{0F561524-D704-4E9B-A167-FF2D76EEEAC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindyn.Infra", "Dindyn.Infra\Dindyn.Infra.csproj", "{423A5BBF-090C-4971-8B37-317E1153993E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D9B3D1CE-C5D3-405C-80FC-DC9737CAAEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9B3D1CE-C5D3-405C-80FC-DC9737CAAEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9B3D1CE-C5D3-405C-80FC-DC9737CAAEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F561524-D704-4E9B-A167-FF2D76EEEAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F561524-D704-4E9B-A167-FF2D76EEEAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F561524-D704-4E9B-A167-FF2D76EEEAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F561524-D704-4E9B-A167-FF2D76EEEAC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,10 +10,10 @@ public class AuthController(IClienteApp clienteApp) : ControllerBase
 {
 	private readonly IClienteApp _clienteApp = clienteApp;
 
-	[HttpPost("login")]
-	public IActionResult Login([FromBody] LoginRequest request)
+	[HttpPost("logon")]
+	public IActionResult Logon([FromBody] LoginRequest request)
 	{
-		var resposta = _clienteApp.Login(request);
+		var resposta = _clienteApp.Logon(request);
 
 		return Ok(resposta);
 	}

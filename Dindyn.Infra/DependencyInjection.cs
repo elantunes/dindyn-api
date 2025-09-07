@@ -1,4 +1,6 @@
 using Dindyn.App.Cliente;
+using Dindyn.App.Cliente.Repositories;
+using Dindyn.App.Cliente.Services;
 using Dindyn.App.Services;
 using Dindyn.Infra.Extensions;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,9 +14,12 @@ public static class DependencyInjection
 		services.AddScoped<IClienteApp, ClienteApp>();
 
 		services.AddScoped<IValidationService, ValidationService>();
+		services.AddScoped<IClienteService, ClienteService>();
+
+		services.AddScoped<IClienteRepository, ClienteRepository>();
 
 		// Configurar FluentValidation
-        services.AddFluentValidation();
+		services.AddFluentValidation();
 
 		return services;
 	}
