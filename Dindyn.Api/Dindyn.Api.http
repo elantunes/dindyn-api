@@ -1,0 +1,16 @@
+@DindynApi_HostAddress = http://localhost:5018
+
+GET {{DindynApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{DindynApi_HostAddress}}/auth/logon
+Accept: application/json
+Content-Type: application/json
+X-Api-Key: q5f3w2a870ixx1lvmmwhc5ux1cjvylyc2a8cjgiduigfajbdiygf
+
+{
+	"email": "admin@dindyn.com",
+	"senha": "123456"
+}
