@@ -1,16 +1,17 @@
-using Dindyn.App.Cliente.Repositories;
 using Dindyn.App.Dtos;
+using Dindyn.App.Interfaces;
 using Dindyn.App.Models;
 using Dindyn.App.Shared.Services;
-using Dindyn.Commons.Exceptions;
+using Dindyn.Domain.Entities;
 
 namespace Dindyn.App.UseCases.Auth.GerarToken;
 
 public class GerarTokenUseCase(
 	IValidationService validationService,
-	IClienteRepository clienteRepository) : IGerarTokenUseCase
+	IDindynDbContext context) : IGerarTokenUseCase
 {
 	private readonly IValidationService _validationService = validationService;
+	private readonly IDindynDbContext _context = context;
 
 	public async Task<Resposta> Execute(LoginRequest request)
 	{
@@ -18,12 +19,21 @@ public class GerarTokenUseCase(
 
 		if (validationErrors.Count != 0)
 			return new Resposta(false, null, validationErrors);
+		
+		var tokenValue = Guid.NewGuid().ToString("N");
 
-		var token = await clienteRepository.GerarToken();
+		var token = new TokenAcesso
+		{
+			ClienteId = 1,
+			Token = tokenValue
+		};
 
-		if (token != null)
-			return new Resposta(true, new { Token = "fake-token" });
+		_context.Tokens.Add(token);
+		await _context.SaveChangesAsync();
 
-		return new Resposta(false, null, [Erro.ClienteCredenciaisInvalidas]);
+		return new Resposta(true, new { 
+			Token = tokenValue,
+			ClienteId = 1
+		});
 	}
 }
