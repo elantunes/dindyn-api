@@ -6,4 +6,5 @@ public class TokenAcesso
 	public int ClienteId { get; set; }
 	public required string Token { get; set; }
 	public DateTime DataCriacao { get; set; }
+	public DateTime DataValidade { get; set; }
 }

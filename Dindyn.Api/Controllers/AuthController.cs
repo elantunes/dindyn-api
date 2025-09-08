@@ -18,4 +18,3 @@ public class AuthController(IGerarTokenUseCase gerarTokenUseCase) : ControllerBa
 		return Ok(resposta);
 	}
 }
-
