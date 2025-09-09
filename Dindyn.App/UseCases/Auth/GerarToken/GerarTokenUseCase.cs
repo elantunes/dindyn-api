@@ -41,7 +41,7 @@ public class GerarTokenUseCase(
 			DataValidade = DateTime.UtcNow.AddYears(1)
 		};
 
-		_context.Tokens.Add(tokenAcesso);
+		_context.TokensAcesso.Add(tokenAcesso);
 		await _context.SaveChangesAsync();
 
 		return new Resposta(true, token);
